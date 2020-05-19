@@ -13,12 +13,18 @@ class HerdsController < ApplicationController
   end
 
   def create
-    @herd = Herd.find(herd_params)
+    @herd = Herd.new(herd_params)
     if @herd.save
       redirect_to herds_path
     else
       render :new
     end
+  end
+
+  def destroy
+    @herd = Herd.find(params[:id])
+    @herd.destroy
+    redirect_to  new_herd_path :notice => "Votre troupeau a été supprimé"
   end
 
 private
