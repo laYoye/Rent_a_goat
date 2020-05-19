@@ -1,2 +1,7 @@
-<h1>Herds#show</h1>
-<p>Find me in app/views/herds/show.html.erb</p>
+<h1><%= @herd.name %></h1>
+
+<p><%= @herd.photo %></p>
+<p> Ce troupeau est constitué de <b><%= @herd.goat_number %></b> chèvres </p>
+<p> Voila ce que le propriétaire pense de son troupeau : <i>"<%= @herd.about %>"</i></p>
+
+
