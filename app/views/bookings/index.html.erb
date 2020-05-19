@@ -1,0 +1,10 @@
+<h1>Booking#index</h1>
+<h1>Vos bookings</h1>
+
+<div class="container">
+  <ul>
+    <% @bookings.each do |booking| %>
+    <li><%= booking.herd.name %></li>
+    <% end %>
+  </ul>
+</div>

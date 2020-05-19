@@ -4,4 +4,4 @@
 <p> Ce troupeau est constitué de <b><%= @herd.goat_number %></b> chèvres </p>
 <p> Voila ce que le propriétaire pense de son troupeau : <i>"<%= @herd.about %>"</i></p>
 
-
+<%= link_to "Je reserve ce troupeau", new_herd_booking_path(params[:id])%>
