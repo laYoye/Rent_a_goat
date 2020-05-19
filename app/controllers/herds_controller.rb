@@ -10,6 +10,7 @@ class HerdsController < ApplicationController
 
   def new
     @herd = Herd.new
+    authorize @herd
   end
 
   def create
