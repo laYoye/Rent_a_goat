@@ -1,2 +1,11 @@
-<h1>Herds#new</h1>
-<p>Find me in app/views/herds/new.html.erb</p>
+<h1>Ajouter un nouveau troupeau:</h1>
+
+<div class="col-4">
+  <%= simple_form_for [@herd] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :goat_number %>
+    <%= f.input :address %>
+    <%= f.input :about %>
+    <%= f.submit "Submit", class: "btn btn-primary" %>
+  <% end %>
+</div>
