@@ -1,2 +1,39 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%=image_path "banner_2.jpeg"%>');">
+  <div class="container">
+    <h1>Rent a Goat</h1>
+    <p>Changez votre vision de la tonte</p>
+    <a class="btn-cta" href="/herds">Découvrez-nous</a>
+  </div>
+</div>
+
+<div class="container">
+
+  <h2 class="text-center">Notre concept</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <%= image_tag "ecologie.jpeg", alt:"image nature" %>
+      <h5>Une tonte écologique</h5>
+      <p>Fini l'essence!</p>
+    </div>
+
+   <div class="card">
+    <%= image_tag "grass.jpeg", alt:"image tonte" %>
+    <h5>Une tonte économique</h5>
+    <p>Fini les tondeuses au garage!</p>
+    </div>
+
+   <div class="card">
+     <%= image_tag "voisin.jpeg", alt:"image voisin" %>
+    <h5>Une tonte silencieuse</h5>
+    <p>Vos voisins seront convaincus!</p>
+  </div>
+
+  </div>
+
+</div>
+
+
+

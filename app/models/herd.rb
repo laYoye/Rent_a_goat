@@ -3,4 +3,5 @@ class Herd < ApplicationRecord
   validates :goat_number, presence: true
   validates :address, presence: true
   validates :about, presence: true
+  has_many :bookings
 end
