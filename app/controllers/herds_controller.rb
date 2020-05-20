@@ -15,9 +15,9 @@ class HerdsController < ApplicationController
 
   def create
     @herd = Herd.new(herd_params)
-    # @herd.user = current_user
+    @herd.user = current_user
     if @herd.save
-      flash[:notice] = 'Bravo! Le troupeau a été crée avec succès'
+      flash[:notice] = "Bravo #{current_user.email} ! Le troupeau a été crée avec succès"
       redirect_to herds_path
     else
       render :new
