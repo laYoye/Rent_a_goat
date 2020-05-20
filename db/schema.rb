@@ -49,6 +49,8 @@ ActiveRecord::Schema.define(version: 2020_05_19_141917) do
     t.string "address"
     t.string "phone"
     t.string "avatar"
+    t.boolean "admin", default: false
+    t.boolean "Herdowner", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
