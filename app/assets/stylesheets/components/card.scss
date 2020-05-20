@@ -31,11 +31,49 @@ margin: 10px;
   border: 1px, solid, rgb(230,230,230);
   padding: 20px;
   border-radius: 3px;
-  text-align: center;
+  text-align: left;
   box-shadow: 0 0 5px rgb(230,230,230);
-  margin: 15px;
+  margin: 20px;
+  background-color: white;
+  width: 450px;
     img {
       height: 281px;
       width: 420px;
   }
+}
+
+
+.card-show {
+  overflow: hidden;
+  height: 320px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.card-show img {
+  height: 281px;
+  width: 420px;
+  object-fit: cover;
+  padding: 15px;
+}
+
+.card-show h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-show p {
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-show .card-show-infos {
+  padding: 16px;
 }
