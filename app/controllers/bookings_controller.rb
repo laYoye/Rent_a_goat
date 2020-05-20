@@ -13,9 +13,9 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.herd = Herd.find(params[:herd_id])
     if @booking.save
+      flash[:notice] = "Bravo #{current_user.email} ! Le troupeau a été crée avec succès"
       redirect_to herds_path
     else
-      raise
       render :new
     end
   end
