@@ -7,6 +7,7 @@
     <div class="text-center">
       <p> Ce troupeau est constitué de <b><%= @herd.goat_number %></b> chèvre(s) </p>
       <p><i>"<%= @herd.about %>"</i></p>
+      <p>Tarif à la journée : <b>10€</b></p>
       <%= link_to "Je reserve ce troupeau", new_herd_booking_path(params[:id])%>
     </div>
 
