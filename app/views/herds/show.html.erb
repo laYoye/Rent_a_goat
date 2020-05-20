@@ -1,7 +1,22 @@
-<h1><%= @herd.name %></h1>
+<h1 class="text-center"><%= @herd.name %></h1>
 
-<p><%= @herd.photo %></p>
-<p> Ce troupeau est constitué de <b><%= @herd.goat_number %></b> chèvres </p>
-<p> Voila ce que le propriétaire pense de son troupeau : <i>"<%= @herd.about %>"</i></p>
+<div class="container">
 
-<%= link_to "Je reserve ce troupeau", new_herd_booking_path(params[:id])%>
+  <div class="card_index">
+    <%= image_tag @herd.photo, alt:"image troupeau" %>
+    <div class="text-center">
+      <p> Ce troupeau est constitué de <b><%= @herd.goat_number %></b> chèvre(s) </p>
+      <p><i>"<%= @herd.about %>"</i></p>
+      <%= link_to "Je reserve ce troupeau", new_herd_booking_path(params[:id])%>
+    </div>
+
+    <br>
+    <br>
+
+   <div>
+    <a class="btn-cta" href="/herds">Retour vers la liste</a>
+  </div>
+
+</div>
+
+
