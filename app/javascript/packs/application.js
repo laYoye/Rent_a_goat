@@ -25,17 +25,21 @@ require("channels")
 // External imports
 import "bootstrap";
 
+
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
+import { formDisplay } from '../components/form_display';
+import { initMapbox } from '../plugins/init_mapbox';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  initMapbox();
+  formDisplay();
 });
 
 // app/javascript/packs/application.js
-import { initMapbox } from '../plugins/init_mapbox';
-initMapbox();
+
 
 // document.addEventListener('turbolinks:load', () => {
 // })
