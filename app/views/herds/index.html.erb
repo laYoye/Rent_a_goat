@@ -12,7 +12,7 @@
     <% @herds.each do |herd| %>
       <div class="col-12 col-lg-6">
         <div class="card_index">
-          <%= image_tag herd.photo, alt:"image troupeau" %>
+          <%= cl_image_tag herd.photo.key, alt: "herd", height: 300, width: 400, crop: :fill %>
           <p><%= link_to herd.name, herd_path(herd.id) %></p>
         </div>
       </div>
