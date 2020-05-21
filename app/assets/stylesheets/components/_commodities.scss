@@ -14,3 +14,7 @@ a:hover {
   font-weight: bold;
 }
 
+.content-wrapper {
+  min-height: calc(100vh - 70px - 80px);
+  position: relative;
+}
