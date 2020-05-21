@@ -1,6 +1,23 @@
-<h1>Mes réservations :</h1>
-<% @bookings.each do |book| %>
-  <%= book.herd.name %><br>
-  <%= book.booking_date %><br>
-  <%= book.confirmation %><br>
-<% end %>
+<div class="container">
+  <div class="container-dashboard">
+    <div class="my_bookings col-6">
+      <h2>Mes réservations :</h2>
+      <ul>
+        <% @bookings.each do |book| %>
+          <%= book.herd.name %> //
+          <%= book.booking_date %><br>
+          Statut de la réservation : <i><%= book.confirmation %></i><br>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="my_herds col-6">
+      <h2>Mes troupeaux  :</h2>
+      <ul>
+        <% @herds.each do |herd| %>
+          <%= herd.name %> - <%= link_to "Supprimer ce troupeau", herd_path(herd), method: :delete, data: { confirm: 'Etes vous sur de vouloir supprimer votre troupeau?' } %><br>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

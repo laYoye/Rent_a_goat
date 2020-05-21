@@ -1,0 +1,20 @@
+.container-dashboard {
+  display: flex;
+  justify-content: space-between;
+  // width: 900px;
+  // margin: 20px auto;
+}
+
+.my_herds ul {
+  border: 1px solid black;
+  padding: 0;
+}
+
+.my_bookings {
+  border-right: 1px solid black;
+}
+
+.my_bookings ul{
+  border: 1px solid black;
+  padding: 0;
+}
