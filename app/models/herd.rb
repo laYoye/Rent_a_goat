@@ -7,4 +7,5 @@ class Herd < ApplicationRecord
   validates :about, presence: true
   has_many :bookings
   belongs_to :user
+  has_one_attached :photo
 end

@@ -2,8 +2,7 @@
 <div class="container">
 
   <div class="card-show">
-    <%= image_tag @herd.photo, alt:"image troupeau" %>
-
+      <%= cl_image_tag @herd.photo.key, height: 300, width: 400, crop: :fill %>
       <div class="card-show-infos">
         <h2><%= @herd.name %></h2>
         <p><i>"<%= @herd.about %>"</i></p>
