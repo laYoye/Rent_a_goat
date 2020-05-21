@@ -1,6 +1,11 @@
-<h1>bookings :</h1>
+<h1>Mes bookings :</h1>
 <% @bookings.each do |book| %>
   <%= book.herd.name %><br>
   <%= book.booking_date %><br>
   <%= book.confirmation %><br>
+<% end %>
+
+<h1>Mes troupeaux  :</h1>
+<% @herds.each do |herd| %>
+  <%= herd.name %><br>
 <% end %>
