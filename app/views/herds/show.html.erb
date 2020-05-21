@@ -10,13 +10,29 @@
         <p> Ce troupeau est constitué de <b><%= @herd.goat_number %></b> chèvre(s) </p>
         <br>
         <br>
-        <a> <%= link_to "Réservez ce troupeau", new_herd_booking_path(params[:id]), :class => "btn-cta" %> </a>
+        <%#= link_to "Réservez ce troupeau", new_herd_booking_path(params[:id]), :class => "btn-cta" %>
+        <p class="btn btn-cta" id="booking-button">Réservez ce troupeau</p>
       </div>
-
 
   </div>
 
   <a class="btn" href="/herds">Retour vers la liste</a>
+
+
+  <div class="row justify-content-center booking-form">
+
+     <div class="col-12 col-md-6 col-lg-4">
+
+      <div class="row justify-content-center mb-5">
+        <%= simple_form_for [@herd, @booking] do |f| %>
+          <%= f.input :booking_date %>
+          <%= f.submit "Submit", class: "btn btn-cta" %>
+        <% end %>
+      </div>
+
+    </div>
+
+  </div>
 
 </div>
 
