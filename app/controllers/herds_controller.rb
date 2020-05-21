@@ -1,7 +1,15 @@
 class HerdsController < ApplicationController
 
   def index
-    @herds = Herd.all
+    # @herds = Herd.all
+    @herds = Herd.geocoded # returns herds with coordinates
+
+    @markers = @herds.map do |herd|
+      {
+        lat: herd.latitude,
+        lng: herd.longitude
+      }
+    end
   end
 
   def show

@@ -1,0 +1,6 @@
+<h1>bookings :</h1>
+<% @bookings.each do |book| %>
+  <%= book.herd.name %><br>
+  <%= book.booking_date %><br>
+  <%= book.confirmation %><br>
+<% end %>
