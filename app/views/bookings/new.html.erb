@@ -1,9 +1,20 @@
-<h1>Réserver ce troupeau :</h1>
-<p>Find me in app/views/booking/new.html.erb</p>
 
-<div class="col-4">
-  <%= simple_form_for [@herd, @booking] do |f| %>
-    <%= f.input :booking_date %>
-    <%= f.submit "Submit", class: "btn btn-primary" %>
-  <% end %>
+<div class="container">
+
+   <div class="row justify-content-center">
+
+     <div class="col-12 col-md-6 col-lg-4">
+
+      <div class="row justify-content-center mb-5">
+        <%= simple_form_for [@herd, @booking] do |f| %>
+          <%= f.input :booking_date %>
+          <%= f.submit "Submit", class: "btn btn-cta" %>
+        <% end %>
+      </div>
+
+    </div>
+
+  </div>
+
 </div>
+

@@ -27,15 +27,16 @@ url6 = URI.open('https://res.cloudinary.com/dlqdcxt4l/image/upload/v1590071419/n
 puts "Creating users..."
 user1 = User.create!( email: "emarie1@gmail.com", password: '123456')
 user2 = User.create!( email: "emarie2@gmail.com", password: '123456')
+user3 = User.create!( email: "yoann@gmail.com", password: 'azerty')
 
 puts "Creating herds..."
-chevrettes = { name: "Les Chevrettes", address: "Saint-Philibert", goat_number: 2, about: "Chevrettes joyeuses et proprettes!", user: user1   }
-seguin =  { name: "Monsieur Seguin", address: "Arles",goat_number: 5, about: "Chèvres disciplinées, elles ne mangeront pas vos plates-bandes!", user: user1 }
-noiraude =  { name: "La noiraude", address: "Fley",goat_number: 1, about: "Chèvre de caractère mais efficace!", user: user2 }
-ribambelle =  { name: "La Ribambelle",  address: "Nancy",goat_number: 3, about: "Un gros troupeau, parfait pour les grands terrains!", user: user2 }
+chevrettes = { name: "Les Chevrettes", address: "Saint-Philibert", goat_number: 2, about: "Chevrettes joyeuses et proprettes!", user: user1, price: 20    }
+seguin =  { name: "Monsieur Seguin", address: "Arles",goat_number: 5, about: "Chèvres disciplinées, elles ne mangeront pas vos plates-bandes!", user: user1, price: 20  }
+noiraude =  { name: "La noiraude", address: "Fley",goat_number: 1, about: "Chèvre de caractère mais efficace!", user: user2, price: 20  }
+ribambelle =  { name: "La Ribambelle",  address: "Nancy",goat_number: 3, about: "Un gros troupeau, parfait pour les grands terrains!", user: user2, price: 20  }
 
-ciflorette = { name: "Ciflorette", address: "Carnac", goat_number: 6, about: "L'amie des enfants! Aime se faire caresser après la tonte :)", user: user1 }
-louperac = { name: "Louperac", address: "La trinité", goat_number: 2, about: "Joli troupeau docile et très soigneux de tous vos végétaux", user: user2 }
+ciflorette = { name: "Ciflorette", address: "Carnac", goat_number: 6, about: "L'amie des enfants! Aime se faire caresser après la tonte :)", user: user3, price: 20  }
+louperac = { name: "Louperac", address: "La trinité", goat_number: 2, about: "Joli troupeau docile et très soigneux de tous vos végétaux", user: user3, price: 20  }
 
 
 herd1 = Herd.create!(chevrettes)
