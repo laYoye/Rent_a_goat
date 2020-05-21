@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   get "dashboards", to: "dashboards#bookings"
   get "dashboards", to: "dashboards#herds"
   resources :herds, only: [:index, :show, :new, :create, :destroy] do
-    resources :bookings, only: [:new, :create]
+    resources :bookings, only: [:new, :create, :show, :destroy]
   end
 end

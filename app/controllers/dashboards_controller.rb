@@ -6,6 +6,7 @@ class DashboardsController < ApplicationController
 
   def herds
     @herds = current_user.herds
+    @bookings = current_user.bookings
   end
 
 end
