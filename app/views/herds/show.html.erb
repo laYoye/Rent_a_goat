@@ -1,25 +1,25 @@
-<h1 class="text-center"><%= @herd.name %></h1>
 
 <div class="container">
 
-  <div class="card_index">
+  <div class="card-show">
     <%= image_tag @herd.photo, alt:"image troupeau" %>
-    <div class="text-center">
-      <p> Ce troupeau est constitué de <b><%= @herd.goat_number %></b> chèvre(s) </p>
-      <p><i>"<%= @herd.about %>"</i></p>
-      <p>Tarif à la journée : <b>10€</b></p>
-      <%= link_to "Je reserve ce troupeau", new_herd_booking_path(params[:id])%>
-    </div>
 
-    <br>
-    <br>
+      <div class="card-show-infos">
+        <h2><%= @herd.name %></h2>
+        <p><i>"<%= @herd.about %>"</i></p>
+        <p> Ce troupeau est constitué de <b><%= @herd.goat_number %></b> chèvre(s) </p>
+        <br>
+        <br>
+        <a class="btn-cta" href="new_herd_booking_path">Réservez ce troupeau</a>
+      </div>
 
+ 
   </div>
 
-   <div >
-    <a class="btn-cta" href="/herds">Retour vers la liste</a>
-  </div>
+  <a class="btn" href="/herds">Retour vers la liste</a>
 
 </div>
+
+
 
 
