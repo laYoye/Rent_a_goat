@@ -13,7 +13,10 @@
       <div class="col-12 col-lg-6">
         <div class="card_index">
           <%= image_tag herd.photo, alt:"image troupeau" %>
-          <p><%= link_to herd.name, herd_path(herd.id) %></p>
+          <div class="card_index_info">
+            <p><%= link_to herd.name, herd_path(herd.id) %></p>
+            <p class="price"><b><%= herd.price %></b>€/j</p>
+          </div>
         </div>
       </div>
     <% end %>
