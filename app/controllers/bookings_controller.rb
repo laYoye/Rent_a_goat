@@ -14,7 +14,7 @@ class BookingsController < ApplicationController
     @booking.herd = Herd.find(params[:herd_id])
     if @booking.save
       flash[:notice] = "Votre réservation a bien été prise en compte ! Le propriétaire vous contactera."
-      redirect_to herds_path
+      redirect_to dashboards_path
     else
       render :new
     end
