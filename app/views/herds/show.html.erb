@@ -3,6 +3,7 @@
 
   <div class="card-show">
     <%= image_tag @herd.photo, alt:"image troupeau" %>
+
       <div class="card-show-infos">
         <h2><%= @herd.name %></h2>
         <p><i>"<%= @herd.about %>"</i></p>
@@ -11,6 +12,8 @@
         <br>
         <a class="btn-cta" href="new_herd_booking_path">Réservez ce troupeau</a>
       </div>
+
+ 
   </div>
 
   <a class="btn" href="/herds">Retour vers la liste</a>
