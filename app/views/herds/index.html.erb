@@ -2,6 +2,13 @@
 
 <div class="container">
   <div class="row justify-content-center">
+
+    <div id="map"
+      style="width: 100%; height: 250px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+
     <% @herds.each do |herd| %>
       <div class="col-12 col-lg-6">
         <div class="card_index">
@@ -10,9 +17,10 @@
         </div>
       </div>
     <% end %>
+
   </div>
 </div>
-<%= link_to "Souhaitez-vous proposer un troupeau?", new_herd_path %>
+
 
 
 

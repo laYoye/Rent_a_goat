@@ -15,10 +15,10 @@ user1 = User.create!( email: "emarie1@gmail.com", password: '123456')
 user2 = User.create!( email: "emarie2@gmail.com", password: '123456')
 
 puts "Creating herds..."
-chevrettes = { name: "Les Chevrettes", photo: "chevrettes.jpg", address: "7 rue blanche, Saint-Philibert", goat_number: 3, about: "Chevrettes joyeuses et proprettes!", user: user1   }
-seguin =  { name: "Monsieur Seguin", photo: "seguin.jpg", address: "12 allée de la tonte, Arles",goat_number: 2, about: "Chèvres disciplinées, elles ne mangeront pas vos plates-bandes!", user: user1 }
-noiraude =  { name: "La noiraude", photo: "noiraude.jpg", address: "12 chemin principal, Fley",goat_number: 1, about: "Chèvre de caractère mais efficace!", user: user2 }
-ribambelle =  { name: "La Ribambelle", photo: "ribambelle.jpg",  address: "1 rue verte, Ergersheim",goat_number: 8, about: "Un gros troupeau, parfait pour les grands terrains!", user: user2 }
+chevrettes = { name: "Les Chevrettes", photo: "chevrettes.jpg", address: "Saint-Philibert", goat_number: 3, about: "Chevrettes joyeuses et proprettes!", user: user1   }
+seguin =  { name: "Monsieur Seguin", photo: "seguin.jpg", address: "Arles",goat_number: 2, about: "Chèvres disciplinées, elles ne mangeront pas vos plates-bandes!", user: user1 }
+noiraude =  { name: "La noiraude", photo: "noiraude.jpg", address: "Fley",goat_number: 1, about: "Chèvre de caractère mais efficace!", user: user2 }
+ribambelle =  { name: "La Ribambelle", photo: "ribambelle.jpg",  address: "Nancy",goat_number: 8, about: "Un gros troupeau, parfait pour les grands terrains!", user: user2 }
 
 [ chevrettes, seguin, noiraude, ribambelle ].each do |attributes|
   herd = Herd.create!(attributes)
