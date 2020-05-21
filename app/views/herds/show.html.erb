@@ -9,6 +9,7 @@
         <p><i>"<%= @herd.about %>"</i></p>
         <p> Ce troupeau est constitué de <b><%= @herd.goat_number %></b> chèvre(s) </p>
         <br>
+        <p> Prix à la journée : <b><%= @herd.price %></b> € </p>
         <br>
         <%#= link_to "Réservez ce troupeau", new_herd_booking_path(params[:id]), :class => "btn-cta" %>
         <p class="btn btn-cta" id="booking-button">Réservez ce troupeau</p>

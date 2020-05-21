@@ -36,7 +36,7 @@ class HerdsController < ApplicationController
   def destroy
     @herd = Herd.find(params[:id])
     @herd.destroy
-    redirect_to  new_herd_path :notice => "Votre troupeau a été supprimé"
+    redirect_to  dashboards_path :notice => "Votre troupeau a été supprimé"
   end
 
 private
