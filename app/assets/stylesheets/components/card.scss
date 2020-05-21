@@ -42,6 +42,11 @@ margin: 10px;
   }
 }
 
+.card_index_info {
+  display: flex;
+  justify-content: space-between;
+}
+
 
 .card-show {
   overflow: hidden;

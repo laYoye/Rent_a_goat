@@ -5,7 +5,7 @@ class Herd < ApplicationRecord
   validates :goat_number, presence: true
   validates :address, presence: true
   validates :about, presence: true
-  has_many :bookings
+  has_many :bookings,  dependent: :destroy
   belongs_to :user
   has_one_attached :photo
 end
