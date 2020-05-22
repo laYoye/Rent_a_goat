@@ -29,7 +29,7 @@ class HerdsController < ApplicationController
     @herd.user = current_user
     if @herd.save
       flash[:notice] = "Bravo #{current_user.email} ! Le troupeau a été crée avec succès"
-      redirect_to herds_path
+      redirect_to dashboards_path
     else
       render :new
     end

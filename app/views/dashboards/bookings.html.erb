@@ -6,7 +6,7 @@
           <% @bookings.each do |book| %>
            <div class="card_index">
             <li>
-              <%= image_tag book.herd.photo %>
+             <a> <%= image_tag book.herd.photo %> </a>
               <%= book.herd.name %> //
               <%= book.booking_date %><br>
               Statut de la réservation : <i><%= book.confirmation %></i><br>

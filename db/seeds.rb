@@ -31,13 +31,13 @@ user3 = User.create!( email: "yoann@gmail.com", password: 'azerty')
 user4 = User.create!( email: "fred@gmail.com", password: 'azerty')
 
 puts "Creating herds..."
-chevrettes = { name: "Les Chevrettes", address: "Saint-Philibert", goat_number: 2, about: "Chevrettes joyeuses et proprettes!", user: user1, price: 20    }
-seguin =  { name: "Monsieur Seguin", address: "Arles",goat_number: 5, about: "Chèvres disciplinées, elles ne mangeront pas vos plates-bandes!", user: user1, price: 20  }
-noiraude =  { name: "La noiraude", address: "Fley",goat_number: 1, about: "Chèvre de caractère mais efficace!", user: user2, price: 20  }
-ribambelle =  { name: "La Ribambelle",  address: "Nancy",goat_number: 3, about: "Un gros troupeau, parfait pour les grands terrains!", user: user2, price: 20  }
+chevrettes = { name: "Les Chevrettes", address: "Lorient", goat_number: 2, about: "Chevrettes joyeuses et proprettes!", user: user1, price: 10    }
+seguin =  { name: "Monsieur Seguin", address: "Arles",goat_number: 5, about: "Chèvres disciplinées, elles ne mangeront pas vos plates-bandes!", user: user1, price: 25  }
+noiraude =  { name: "La noiraude", address: "Fley",goat_number: 1, about: "Chèvre de caractère mais efficace!", user: user2, price: 8  }
+ribambelle =  { name: "La Ribambelle",  address: "La Trinité-sur-Mer",goat_number: 3, about: "Un gros troupeau, parfait pour les grands terrains!", user: user2, price: 19  }
 
-ciflorette = { name: "Ciflorette", address: "Carnac", goat_number: 6, about: "L'amie des enfants! Aime se faire caresser après la tonte :)", user: user3, price: 20  }
-louperac = { name: "Louperac", address: "La trinité", goat_number: 2, about: "Joli troupeau docile et très soigneux de tous vos végétaux", user: user3, price: 20  }
+ciflorette = { name: "Ciflorette", address: "Brest", goat_number: 6, about: "L'amie des enfants! Aime se faire caresser après la tonte :)", user: user3, price: 28  }
+louperac = { name: "Louperac", address: "Nancy", goat_number: 2, about: "Joli troupeau docile et très soigneux de tous vos végétaux", user: user3, price: 12  }
 
 
 herd1 = Herd.create!(chevrettes)
@@ -58,7 +58,6 @@ herd1.photo.attach(io: url1, filename: 'Les Chevrettes.png', content_type: 'imag
 herd2.photo.attach(io: url2, filename: 'Monsieur Seguin.png', content_type: 'image/png')
 herd3.photo.attach(io: url3, filename: 'La noiraude.png', content_type: 'image/png')
 herd4.photo.attach(io: url4, filename: 'La Ribambelle.png', content_type: 'image/png')
-
 herd5.photo.attach(io: url5, filename: 'ciflorette.png', content_type: 'image/png')
 herd6.photo.attach(io: url6, filename: 'louperac.png', content_type: 'image/png')
 
