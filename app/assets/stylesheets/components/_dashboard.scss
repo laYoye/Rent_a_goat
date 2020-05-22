@@ -5,8 +5,8 @@
   // margin: 20px auto;
 }
 
-.my_herds ul {
-  border: 1px solid black;
+.my_herds ul li {
+  border-bottom: 1px solid black;
   padding: 0;
 }
 
@@ -14,7 +14,18 @@
   border-right: 1px solid black;
 }
 
-.my_bookings ul{
-  border: 1px solid black;
+.my_bookings ul li {
+  border-bottom: 1px solid black;
   padding: 0;
+  list-style: none;
+  margin-bottom: 20px;
 }
+
+.my_bookings h2 {
+  margin-bottom: 20px;
+}
+
+.my_herds h2 {
+  margin-bottom: 20px;
+}
+

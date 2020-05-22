@@ -43,6 +43,11 @@ margin: 10px;
   object-fit: cover;
 }
 
+.card_index_info {
+  display: flex;
+  justify-content: space-between;
+}
+
 
 .card-show {
   overflow: hidden;
