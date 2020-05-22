@@ -8,7 +8,13 @@
         <% @herds.each do |herd| %>
             <div class="card_index">
               <%= image_tag herd.photo, alt:"image troupeau" %>
-              <p><%= link_to herd.name, herd_path(herd.id) %></p>
+              <div class="card_index_info">
+                <p><%= link_to herd.name, herd_path(herd.id) %></p>
+                <div class="card_index_sub_info">
+                  <p><b><%= herd.goat_number %></b> chèvre(s) </p>
+                  <p><b><%= herd.price %></b>€/j</p>
+                </div>
+              </div>
             </div>
         <% end %>
 
@@ -17,7 +23,6 @@
       <div id="map" style="height: 100%; width: 100%;"
         data-markers="<%= @markers.to_json %>"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-
       </div>
     </div>
 
