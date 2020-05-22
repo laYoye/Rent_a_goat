@@ -2,17 +2,24 @@
 
 .content {
   display: flex;
+  width: 100vw;
 }
 
-#map {
-  height: 100vh;
-  width: 250px;
-}
+/*#map {
+  height: 100%;
+  width: 100%;
+}*/
 
 .map-cards {
   display:grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: auto auto auto;
   grid-gap: 16px;
   flex-grow: 1;
   padding: 15px;
+  width: 66.67%;
+}
+
+.map-container {
+  height: 100vh;
+  width: 33.33%;
 }
