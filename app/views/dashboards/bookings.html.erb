@@ -1,25 +1,32 @@
 <div class="container">
   <div class="container-dashboard">
     <div class="my_bookings col-6">
-      <h2>Mes réservations</h2>
-      <ul>
-        <% @bookings.each do |book| %>
-          <li>
-            <%= book.herd.name %> //
-            <%= book.booking_date %><br>
-            Statut de la réservation : <i><%= book.confirmation %></i><br>
-            <%= link_to "Annuler la réservation", booking_path(book), method: :delete, data: { confirm: 'Etes vous sur de vouloir annuler la réservation?' } %>
-          </li>
-        <% end %>
-      </ul>
-    </div>
+        <ul>
+          <h2>Mes réservations</h2>
+          <% @bookings.each do |book| %>
+           <div class="card_index">
+            <li>
+              <%= image_tag book.herd.photo %>
+              <%= book.herd.name %> //
+              <%= book.booking_date %><br>
+              Statut de la réservation : <i><%= book.confirmation %></i><br>
+              <%= link_to "Annuler la réservation", booking_path(book), method: :delete, data: { confirm: 'Etes vous sur de vouloir annuler la réservation?' } %>
+            </li>
+          </div>
+          <% end %>
+        </ul>
+        </div>
+
 
     <div class="my_herds col-6">
-      <h2>Mes troupeaux</h2>
       <ul>
+        <h2>Mes troupeaux</h2>
         <% @herds.each do |herd| %>
-          <%= herd.name %> - <%= link_to "Supprimer ce troupeau", herd_path(herd), method: :delete, data: { confirm: 'Etes vous sur de vouloir supprimer votre troupeau?' } %><br>
-        <% end %>
+          <div class="card_index">
+            <%= image_tag herd.photo %>
+            <%= herd.name %> - <%= link_to "Supprimer ce troupeau", herd_path(herd), method: :delete, data: { confirm: 'Etes vous sur de vouloir supprimer votre troupeau?' } %><br>
+          <% end %>
+        </div>
       </ul>
     </div>
   </div>
