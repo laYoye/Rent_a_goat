@@ -19,15 +19,15 @@
 
 
     <div class="my_herds col-6">
-      <ul>
-        <h2>Mes troupeaux</h2>
-        <% @herds.each do |herd| %>
-          <div class="card_index">
-            <%= image_tag herd.photo %>
-            <%= herd.name %> - <%= link_to "Supprimer ce troupeau", herd_path(herd), method: :delete, data: { confirm: 'Etes vous sur de vouloir supprimer votre troupeau?' } %><br>
-          <% end %>
-        </div>
-      </ul>
+        <ul>
+          <h2>Mes troupeaux</h2>
+          <% @herds.each do |herd| %>
+            <div class="card_index">
+              <%= image_tag herd.photo %>
+              <%= herd.name %> - <%= link_to "Supprimer ce troupeau", herd_path(herd), method: :delete, data: { confirm: 'Etes vous sur de vouloir supprimer votre troupeau?' } %><br>
+            </div>
+            <% end %>
+        </ul>
     </div>
   </div>
 </div>
