@@ -28,6 +28,7 @@ puts "Creating users..."
 user1 = User.create!( email: "emarie1@gmail.com", password: '123456')
 user2 = User.create!( email: "emarie2@gmail.com", password: '123456')
 user3 = User.create!( email: "yoann@gmail.com", password: 'azerty')
+user4 = User.create!( email: "fred@gmail.com", password: 'azerty')
 
 puts "Creating herds..."
 chevrettes = { name: "Les Chevrettes", address: "Saint-Philibert", goat_number: 2, about: "Chevrettes joyeuses et proprettes!", user: user1, price: 20    }

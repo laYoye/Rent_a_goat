@@ -44,7 +44,7 @@ class HerdsController < ApplicationController
 private
 
   def herd_params
-    params.require(:herd).permit(:name, :address, :goat_number, :photo, :about)
+    params.require(:herd).permit(:name, :address, :goat_number, :photo, :about, :price)
   end
 
 end
