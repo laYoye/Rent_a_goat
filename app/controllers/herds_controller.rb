@@ -7,7 +7,8 @@ class HerdsController < ApplicationController
     @markers = @herds.map do |herd|
       {
         lat: herd.latitude,
-        lng: herd.longitude
+        lng: herd.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { herd: herd })
       }
     end
   end
