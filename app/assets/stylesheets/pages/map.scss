@@ -1,0 +1,18 @@
+
+
+.content {
+  display: flex;
+}
+
+#map {
+  height: 100vh;
+  width: 250px;
+}
+
+.map-cards {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  flex-grow: 1;
+  padding: 15px;
+}
