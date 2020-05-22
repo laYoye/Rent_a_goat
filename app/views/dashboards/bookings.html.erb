@@ -4,11 +4,12 @@
       <h2>Mes réservations</h2>
       <ul>
         <% @bookings.each do |book| %>
-        <li>
-          <%= book.herd.name %> //
-          <%= book.booking_date %><br>
-          Statut de la réservation : <i><%= book.confirmation %></i><br>
-        </li>
+          <li>
+            <%= book.herd.name %> //
+            <%= book.booking_date %><br>
+            Statut de la réservation : <i><%= book.confirmation %></i><br>
+            <%= link_to "Annuler la réservation", booking_path(book), method: :delete, data: { confirm: 'Etes vous sur de vouloir annuler la réservation?' } %>
+          </li>
         <% end %>
       </ul>
     </div>

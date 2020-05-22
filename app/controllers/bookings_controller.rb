@@ -20,9 +20,9 @@ class BookingsController < ApplicationController
   end
 
   def destroy
-    @herd = Herd.find(params[:id])
-    @herd.destroy
-    redirect_to  dashboards_path :notice => "Votre troupeau a été supprimé"
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to  dashboards_path :notice => "Votre réservation a été annulée"
   end
 
 private
