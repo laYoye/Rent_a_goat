@@ -1,28 +1,29 @@
-<h1 class="text-center">Découvrez nos troupeaux</h1>
 
-<div class="container">
-  <div class="row justify-content-center">
+  <h1 class="text-center">Découvrez nos troupeaux</h1>
 
-    <div id="map"
-      style="width: 100%; height: 250px;"
-      data-markers="<%= @markers.to_json %>"
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  <div class="content">
+
+    <div class="map-cards">
+
+        <% @herds.each do |herd| %>
+            <div class="card_index">
+              <%= image_tag herd.photo, alt:"image troupeau" %>
+              <p><%= link_to herd.name, herd_path(herd.id) %></p>
+            </div>
+        <% end %>
+
+    </div>
+    <div class="map-container">
+      <div id="map" style="height: 100%; width: 100%;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+
+      </div>
     </div>
 
-    <% @herds.each do |herd| %>
-      <div class="col-12 col-lg-6">
-        <div class="card_index">
-          <%= cl_image_tag herd.photo.key, alt: "herd", height: 300, width: 400, crop: :fill %>
-          <div class="card_index_info">
-            <p><%= link_to herd.name, herd_path(herd.id) %></p>
-            <p class="price"><b><%= herd.price %></b>€/j</p>
-          </div>
-        </div>
-      </div>
-    <% end %>
-
   </div>
-</div>
+
+
 
 
 
